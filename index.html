@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Kalif's Portfolio Website</title>
+</head>
+<body>
+    
+    <!-- About section (hidden by default) -->
+    <div class="about">
+        <p class="text page">My name's Kalif Kai Permadi, people usually call me Kalif or Kai.
+                             Currently, I'm a student from SMP Labschool Kebayoran.<br><br>
+                             I spent my free time by coding, solving a rubik's cube, listening to musics, 
+                             typing, and playing Minecraft, which explains the style of this website.<br><br>
+        </p>
+    </div>
+
+    <!-- Work section (hidden by default) -->
+    
+    <div class="work">
+        <p class="text page">Coming soon!  <!-- TokoKita Mobile App<br>
+                            <iframe src="https://www.youtube.com/watch?v=P0cKLL_QAKM" frameborder="0"></iframe>
+                            Working together with my friends, Kinan and Raisha, we made a prototype app that can order food in restaurant contactless. This project won Kihajar STEM 2021 -->
+        </p>
+    </div>
+
+    <!-- Contact section (hidden by default) -->
+    <div class="contact">
+        <p class="text page">You can contact me here<br>
+                             <a href="instagram.com/mrkalkaper" id="instagram">Instagram</a>
+                             <a href="wa.me/62895360320420" id="whatsapp">Whatsapp</a>
+                             <a href="mailto:kalif.kai.permadi@gmail.com" id="email">Email</a>
+        </p>
+    </div>
+
+    <!-- Cover when lever deactivates -->
+    <img src="assets/image/cover.png" class="cover" id="cover">
+
+    <!-- Page with explanation -->
+    <div class="page" id="page">
+        <img src="assets/image/page.png">
+        <div class="done" id="done">
+            <p class="text">Done</p>
+            <img src="assets/image/done.png">
+            <img src="assets/image/done_hover.png">
+        </div>
+    </div>
+
+    <!-- Body -->
+    <section class="wrapper">
+
+        <!-- First row -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <!-- Second row -->
+        <div></div>
+        <div class="content">
+
+            <!-- Greeting -->
+            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
+            <img src="assets/image/oak_signs.png" class="sign">
+            <p class="text">Hi! I'm Kalif<br>Welcome to my website!</p>
+        </div>
+        <div></div>
+        <div class="content">
+
+            <!-- About -->
+            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
+            <img src="assets/image/oak_signs.png" class="sign">
+            <p class="text" onclick="showAbout()" id="about">About</p>
+        </div>
+        <div></div>
+
+        <!-- Third row -->
+        <div></div>
+        <div></div>
+        <div class="content">
+
+            <!-- Lever -->
+            <img src="assets/image/lever_base.png">
+            <img src="assets/image/lever.png" class="lever" id="lever">
+            <button class="lever-flick" id="rotate" onclick="leverFlick()">
+                <audio src="assets/audio/lever_activate.ogg" id="activate"></audio>
+                <audio src="assets/audio/lever_deactivate.ogg" id="deactivate"></audio>
+            </button>
+        </div>
+        <div></div>
+        <div></div>
+
+        <!-- Fourth row -->
+        <div></div>
+        <div class="content">
+
+            <!-- Work -->
+            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
+            <img src="assets/image/oak_signs.png" class="sign">
+            <p class="text" onclick="showWork()" id="work">Work</p>
+        </div>
+        <div></div>
+        <div class="content">
+
+            <!-- Contact -->
+            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
+            <img src="assets/image/oak_signs.png" class="sign">
+            <p class="text" onclick="showContact()" id="contact">Contact</p>
+        </div>
+        <div></div>
+
+        <!-- Fifth row -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
