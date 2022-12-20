@@ -86,11 +86,53 @@ body {
     align-items: center;
     position: absolute;
 }
-.about .text, .work .text, .contact .text {
-    width: 224px;
+.about .text, .work, .work .text, .contact .text {
+    width: 216px;
     margin: 0;
-    margin-bottom: 72px;
-    height: 300px;
+    height: fit-content;
+}
+.about {
+    transform: translateY(-80px) translateX(-4px);
+}
+.contact {
+    transform: translateY(-148px) translateX(-4px);
+}
+.work {
+    justify-content: space-between;
+    align-items: flex-end;
+    transform: translateY(60px) translateX(-4px);
+}
+.work-slides {
+    display: none;
+    position: relative;
+    transform: translateY(-244px);
+}
+.controls {
+    width: 216px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(24px);
+}
+.controls img {
+    position: absolute;
+}
+.controls button {
+    width: 36px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+}
+.images img:nth-child(2) {
+    display: none;
+}
+.images:hover img:nth-child(2) {
+    display: block;
+}
+.next {
+    transform: translateX(-18px);
+}
+.next img {
+    transform: translateX(-18px);
 }
 #instagram {
     color: #8134af;
@@ -121,6 +163,6 @@ body {
     text-shadow: 1px 1px #000000;
 }
 iframe {
-    width: 224px;
+    width: 216px;
     aspect-ratio: 16/9;
 }

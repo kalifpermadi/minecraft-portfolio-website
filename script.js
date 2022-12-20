@@ -1,17 +1,10 @@
+// When lever is flicked
 const lever = document.getElementById("lever");
 const cover = document.getElementById("cover");
 const lamp = document.querySelectorAll(".lamp");
 const activate = document.getElementById("activate");
 const deactivate = document.getElementById("deactivate");
-const about = document.querySelector(".about");
-const aboutText = document.getElementById("about");
-const work = document.querySelector(".work");
-const workText = document.getElementById("work");
-const contact = document.querySelector(".contact");
-const contactText = document.getElementById("contact");
-const page = document.getElementById("page");
-const done = document.getElementById("done");
-
+const flick = document.getElementById("rotate");
 lever.onclick = function() {leverFlick()};
 var x = 0;
 function leverFlick() {
@@ -34,28 +27,62 @@ function leverFlick() {
     }
 };
 
+// When "About" text is clicked
+const page = document.getElementById("page");
+const about = document.querySelector(".about");
+const aboutText = document.getElementById("about");
 aboutText.onclick = function() {showAbout()};
 function showAbout() {
+    flick.style.display = "none";
     page.style.display = "flex";
     about.style.display = "flex";
 }
 
+// When "Projects" text is clicked
+const work = document.querySelector(".work");
+const workText = document.getElementById("work");
 workText.onclick = function() {showWork()};
 function showWork() {
+    flick.style.display = "none";
     page.style.display = "flex";
     work.style.display = "flex";
 }
 
+// When "Contact" text is clicked
+const contact = document.querySelector(".contact");
+const contactText = document.getElementById("contact");
 contactText.onclick = function() {showContact()};
 function showContact() {
+    flick.style.display = "none";
     page.style.display = "flex";
     contact.style.display = "flex";
 }
 
+// When "Done" button is clicked
+const done = document.getElementById("done");
 done.onclick = function() {hideAbout()};
 function hideAbout() {
+    flick.style.display = "block";
     page.style.display = "none";
     about.style.display = "none";
     work.style.display = "none";
     contact.style.display = "none";
+}
+
+var pageIndex = 1;
+showPage(pageIndex);
+
+function plusPage(n){
+    showPage(pageIndex += n);
+}
+
+function showPage(n) {
+    var i;
+    var pages = document.getElementsByClassName("work-slides");
+    if (n > pages.length) {pageIndex = 1;}
+    if (n < 1) {pageIndex = pages.length;}
+    for (i = 0; i < pages.length; i++) {
+        pages[i].style.display = "none";
+    }
+    pages[pageIndex-1].style.display = "block";
 }
