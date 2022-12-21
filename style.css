@@ -16,10 +16,11 @@ body {
     background-position: center;
 }
 .cover {
-    z-index: 4;
+    z-index: 1;
     position: absolute;
     width: 100%;
     height: 100%;
+    background-color: #000000bf;
 }
 .page {
     z-index: 1;
@@ -47,7 +48,7 @@ body {
     position: absolute;
 }
 .lever-flick {
-    z-index: 5;
+    z-index: 1;
     position: absolute;
     height: 64px;
     width: 48px;
@@ -62,9 +63,10 @@ body {
     align-items: center;
 }
 .sign {
-    position: fixed;
+    position: absolute;
 }
 .text {
+    z-index: 1;
     display: flex;
     position: absolute;
     width: 128px;
@@ -74,6 +76,8 @@ body {
     text-align: center;
     font-family: "minecraft";
 }
+
+/* About, work, and contact section */
 .about .page, .work .page, .contact .page {
     text-align: left;
     justify-content: start;
@@ -90,58 +94,6 @@ body {
     width: 216px;
     margin: 0;
     height: fit-content;
-}
-.about {
-    transform: translateY(-80px) translateX(-4px);
-}
-.contact {
-    transform: translateY(-148px) translateX(-4px);
-}
-.work {
-    justify-content: space-between;
-    align-items: flex-end;
-    transform: translateY(60px) translateX(-4px);
-}
-.work-slides {
-    display: none;
-    position: relative;
-    transform: translateY(-244px);
-}
-.controls {
-    width: 216px;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(24px);
-}
-.controls img {
-    position: absolute;
-}
-.controls button {
-    width: 36px;
-    height: 20px;
-    position: absolute;
-    opacity: 0;
-}
-.images img:nth-child(2) {
-    display: none;
-}
-.images:hover img:nth-child(2) {
-    display: block;
-}
-.next {
-    transform: translateX(-18px);
-}
-.next img {
-    transform: translateX(-18px);
-}
-#instagram {
-    color: #8134af;
-}
-#whatsapp {
-    color: #25d366;
-}
-#email {
-    color: #bb001b;
 }
 .done {
     display: flex;
@@ -162,7 +114,66 @@ body {
     color: white;
     text-shadow: 1px 1px #000000;
 }
+
+/* About section */
+.about {
+    transform: translateY(-80px) translateX(-4px);
+}
+
+/* Work section */
+.work {
+    justify-content: space-between;
+    align-items: flex-end;
+    transform: translateY(60px) translateX(-4px);
+}
+.work-slides {
+    display: none;
+    position: relative;
+    transform: translateY(-244px);
+}
 iframe {
     width: 216px;
     aspect-ratio: 16/9;
+    transform: translateY(-2px);
+}
+.controls {
+    width: 216px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(24px);
+}
+.controls img {
+    position: absolute;
+}
+.controls button {
+    width: 36px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+}
+.previous img:nth-child(2), .next img:nth-child(2) {
+    display: none;
+}
+.previous:hover img:nth-child(2), .next:hover img:nth-child(2) {
+    display: block;
+}
+.next {
+    transform: translateX(-18px);
+}
+.next img {
+    transform: translateX(-18px);
+}
+
+/* Contact section */
+.contact {
+    transform: translateY(-148px) translateX(-4px);
+}
+#instagram {
+    color: #8134af;
+}
+#whatsapp {
+    color: #25d366;
+}
+#email {
+    color: #bb001b;
 }
