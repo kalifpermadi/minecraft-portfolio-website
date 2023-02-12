@@ -60,7 +60,6 @@ function flick() {
 }
 
 
-
 const about = document.getElementById("about");
 function showAbout() {
     about.style.display = "block";
