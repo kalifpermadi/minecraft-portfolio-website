@@ -4,156 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <title>Kalif's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Kalif's Minecraft Website</title>
 </head>
 <body>
-    
-    <!-- About section (hidden by default) -->
-    <div class="about">
-        <p class="text page">
-            My name's Kalif Kai Permadi, people usually call me Kalif or Kai.
-            Currently, I'm a student from SMP Labschool Kebayoran.<br><br>
-            I spent my free time by coding, solving a rubik's cube, listening to musics, 
-            typing, and playing Minecraft, which explains the style of this website.
-        </p>
+    <div id="about">
+        <img src="assets/image/my_picture.jpg" width="160px" height="160px">
+        <p>Hi, I'm Kalif Kai Permadi. People call me Kalif or Kai. I'm a 9th grade student from SMP Labschool Kebayoran. Nice to meet you!</p>
     </div>
-
-    <!-- Work section (hidden by default) -->
-    <div class="work">
-        <div class="work-slides">
-            <p class="text page">
-                TokoKita Mobile App<br>
-                <iframe src="https://www.youtube.com/embed/P0cKLL_QAKM" frameborder="0"></iframe>
-                Working together with my friends, Kinan and Raisha, we made a prototype app that can order food in restaurant contactless. 
-                This project won Kihajar STEM 2021.
-            </p>
+    <div id="achievements">
+        <div class="achievementsSlide">
+            <p>Medali Emas (Gold Medalist) OSN SD 2019 bidang Matematika</p>
+            <img src="assets/image/achievements_1.jpg" width="216px">
+            <img src="assets/image/page_previous.png" onclick="previousAchievements()">
+            <img src="assets/image/page_next.png" onclick="nextAchievements()">
         </div>
-        <div class="work-slides">
-            <p class="text page">
-                E-learning Redesign<br><br>
-                <a href="https://github.com/kalifpermadi/elearning-redesign">Github repository</a><br>
-                My school use e-learning and I think it needs an improvement in UI.
-            </p>
+        <div class="achievementsSlide">
+            <p>Juara Umum (Overall Winner) Kihajar STEM 2021 with Kinan and Raisha</p>
+            <iframe src="https://www.youtube.com/embed/P0cKLL_QAKM" width="216" height="121.5" frameborder="0"></iframe>
+            <img src="assets/image/page_previous.png" onclick="previousAchievements()">
+            <img src="assets/image/page_next.png" onclick="nextAchievements()">
         </div>
-        <div class="work-slides">
-            <p class="text page">
-                Password Generator<br><br>
-                <a href="https://github.com/kalifpermadi/password-generator">Github repository</a>
-                <a href="https://kalifpermadi.github.io/password-generator">Live website</a><br>
-                Made my own version of password generator.
-            </p>
-        </div>
-        <div class="controls">
-            <div class="previous">
-                <img src="assets/image/page_previous.png">
-                <img src="assets/image/page_previous_hover.png">
-                <button onclick="plusPage(-1)" class="previous"></button>
-            </div>
-            <div class="next">
-                <img src="assets/image/page_next.png">
-                <img src="assets/image/page_next_hover.png">
-                <button onclick="plusPage(1)" class="next"></button>
-            </div>
+        <div class="achievementsSlide">
+            <p>I will add more here soon...</p>
+            <img src="assets/image/page_previous.png" onclick="previousAchievements()">
+            <img src="assets/image/page_next.png" onclick="nextAchievements()">
         </div>
     </div>
-
-    <!-- Contact section (hidden by default) -->
-    <div class="contact">
-        <p class="text page">
-            You can contact me here:<br>
-            <a href="instagram.com/mrkalkaper" id="instagram">Instagram</a>
-            <a href="wa.me/62895360320420" id="whatsapp">Whatsapp</a>
-            <a href="mailto:kalif.kai.permadi@gmail.com" id="email">Email</a>
-        </p>
+    <div id="coolThings">
+        <div class="coolThingsSlide">
+            <p>Minecraft Circle Generator</p>
+            <p><a href="https://kalifpermadi.github.io/minecraft-circle-generator" target="_blank">Live Website</a></p>
+            <p><a href="https://github.com/kalifpermadi/minecraft-circle-generator" target="_blank">Github Repo</a></p>
+            <img src="assets/image/page_previous.png" onclick="previousCoolThings()">
+            <img src="assets/image/page_next.png" onclick="nextCoolThings()">
+        </div>
+        <div class="coolThingsSlide">
+            <p>Guess the Number Game</p>
+            <p><a href="https://kalifpermadi.github.io/guess-the-number" target="_blank">Live Website</a></p>
+            <p><a href="https://github.com/kalifpermadi/guess-the-number" target="_blank">Github Repo</a></p>
+            <img src="assets/image/page_previous.png" onclick="previousCoolThings()">
+            <img src="assets/image/page_next.png" onclick="nextCoolThings()">
+        </div>
+        <div class="coolThingsSlide">
+            <p>Python Bad Apple!! Terminal</p>
+            <p><a href="https://github.com/kalifpermadi/bad-apple-terminal" target="_blank">Github Repo</a></p>
+            <img src="assets/image/page_previous.png" onclick="previousCoolThings()">
+            <img src="assets/image/page_next.png" onclick="nextCoolThings()">
+        </div>
     </div>
+    <div id="contact"></div>
 
-    <!-- Cover when lever deactivates -->
-    <div class="cover" id="cover"></div>
-
-    <!-- Page with explanation -->
-    <div class="page" id="page">
+    <div id="page">
         <img src="assets/image/page.png">
-        <div class="done" id="done">
-            <p class="text">Done</p>
-            <img src="assets/image/done.png">
-            <img src="assets/image/done_hover.png">
-        </div>
+        <img src="assets/image/done.png" id="done" onclick="hidePage()">
     </div>
 
-    <!-- Body -->
-    <section class="wrapper">
-
-        <!-- First row -->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-
-        <!-- Second row -->
-        <div></div>
-        <div class="content">
-
-            <!-- Greeting -->
-            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
-            <img src="assets/image/oak_signs.png" class="sign">
-            <p class="text">Hi! I'm Kalif<br>Welcome to my website!</p>
+    <section id="blocks">
+        <div class="lamp">
+            <img src="assets/image/redstone_lamp.png" class="redstoneLamp">
+            <img src="assets/image/oak_signs.png" onclick="showAbout()">
+            <p>About</p>
         </div>
-        <div></div>
-        <div class="content">
-
-            <!-- About -->
-            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
-            <img src="assets/image/oak_signs.png" class="sign">
-            <p class="text" onclick="showAbout()" id="about">About</p>
+        <div class="lamp">
+            <img src="assets/image/redstone_lamp.png" class="redstoneLamp">
+            <img src="assets/image/oak_signs.png" onclick="showAchievements()">
+            <p>Achievements</p>
         </div>
-        <div></div>
-
-        <!-- Third row -->
-        <div></div>
-        <div></div>
-        <div class="content">
-
-            <!-- Lever -->
+        <div id="lever">
             <img src="assets/image/lever_base.png">
-            <img src="assets/image/lever.png" class="lever" id="lever">
-            <button class="lever-flick" id="rotate" onclick="leverFlick()">
-                <audio src="assets/audio/lever_activate.ogg" id="activate"></audio>
-                <audio src="assets/audio/lever_deactivate.ogg" id="deactivate"></audio>
-            </button>
+            <img src="assets/image/lever.png" id="leverFlick" onclick="flick()">
         </div>
-        <div></div>
-        <div></div>
-
-        <!-- Fourth row -->
-        <div></div>
-        <div class="content">
-
-            <!-- Work -->
-            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
-            <img src="assets/image/oak_signs.png" class="sign">
-            <p class="text" onclick="showWork()" id="work">Projects</p>
+        <div class="lamp">
+            <img src="assets/image/redstone_lamp.png" class="redstoneLamp">
+            <img src="assets/image/oak_signs.png" onclick="showCoolThings()">
+            <p>Cool things I made</p>
         </div>
-        <div></div>
-        <div class="content">
-
-            <!-- Contact -->
-            <img src="assets/image/redstone_lamp.png" class="lamp" id="lamp">
-            <img src="assets/image/oak_signs.png" class="sign">
-            <p class="text" onclick="showContact()" id="contact">Contact</p>
+        <div class="lamp">
+            <img src="assets/image/redstone_lamp.png" class="redstoneLamp">
+            <img src="assets/image/oak_signs.png" onclick="showContact()">
+            <p>Contact</p>
         </div>
-        <div></div>
-
-        <!-- Fifth row -->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
     </section>
     
-    
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
