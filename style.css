@@ -26,6 +26,15 @@ body {
 #page > img:first-child {
     left: 54px
 }
+#page > .done > p {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, 75%);
+    color: white;
+    text-shadow: 1px 1px #000000c0;
+    letter-spacing: 1px;
+}
 #blocks {
     max-width: 640px;
     height: 384px;
@@ -87,7 +96,10 @@ body {
 #leverFlick {
     cursor: pointer;
 }
-#about, #achievements, #coolThings, #contact {
+#about,
+#achievements,
+#coolThings,
+#contact {
     width: 216px;
     height: 300px;
     position: absolute;
@@ -100,16 +112,19 @@ body {
 #about > img {
     border-radius: 50%;
 }
-.achievementsSlide > img:nth-last-child(2), .coolThingsSlide > img:nth-last-child(2){
+.achievementsSlide > img:nth-last-child(2),
+.coolThingsSlide > img:nth-last-child(2){
     position: absolute;
     left: 0;
     bottom: 0;
 }
-.achievementsSlide > img:nth-last-child(1), .coolThingsSlide > img:nth-last-child(1){
+.achievementsSlide > img:nth-last-child(1),
+.coolThingsSlide > img:nth-last-child(1){
     position: absolute;
     right: 0;
     bottom: 0;
 }
-.achievementsSlide:not(:first-child), .coolThingsSlide:not(:first-child) {
+.achievementsSlide:not(:first-child),
+.coolThingsSlide:not(:first-child) {
     display: none;
 }
